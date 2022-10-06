@@ -21,7 +21,8 @@ public:
     void operator--();  
 
 
-    //Função usando o operador binario, acrescenta um elemento rand(), no incio da fila, quando chamada. Na vida real, em uma fila é necessario colocar alguem que tenha prioridade na frente, ou seja, no inicio da fila. 
+    //Função usando o operador binario, acrescenta um elemento rand(), no incio da fila, quando chamada. Na vida real, 
+    //em uma fila é necessario colocar alguem que tenha prioridade na frente, ou seja, no inicio da fila. 
     fila operator+(){
     {
         sloc++;
