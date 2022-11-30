@@ -66,7 +66,7 @@ void Y::make_k(void)
 void Z::f(void)
 {
 
-  cout << k; // imprimir o cálculo feito em Y
+  cout << k;// imprimir o cálculo feito em Y
   // i = 2;
   // j = 3;
 }

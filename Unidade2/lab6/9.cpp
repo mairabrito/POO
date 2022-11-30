@@ -42,7 +42,7 @@ public:
     void make_k(void)
     {
         Y::make_k();
-        k = i + j;
+        k = i / j;
     };
 };
 

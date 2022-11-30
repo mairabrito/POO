@@ -3,7 +3,7 @@
  */
 
 /**
- * - A princípio não vai funcionar. Para que funcione, é necessário reescrever as funções-membro da classe base(X) na classe derivada (Y), tanto para o acesso protected quanto para o private. No private se faz necessário tbm reescrever as variáveis i e j.
+ * - A princípio não vai funcionar. Para funcionar é necessário reescrever as funções-membro da classe base(X) na classe derivada (Y), tanto para o acesso protected quanto para o private. No private se faz necessário tbm reescrever as variáveis i e j.
  */
 
 #include <iostream>

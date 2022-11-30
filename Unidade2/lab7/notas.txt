@@ -1,0 +1,11 @@
+Laboratório 5
+
+1. Rode o exemplo que está no material: EXEMPLO DE CONSTRUTORES E DESTRUTORES (HERANÇA) para entender o uso de construtores e destrutores com herança. Explique seu entendimento geral com comentarios.no código.
+
+2. Adicione construtores com parametros no exemplo anterior. Para isto rode e teste antes o exemplo no slide 14 das classes BasAg e Agente. Explique com comentarios.no código.
+
+3. Rode o exemplo que está no material: EXEMPLO SIMPLES CONSTRUTORES E DESTRUTORES (HERANÇA MÚLTIPLA). Explique seu entendimento geral com comentarios.no código.
+
+4. Adicione construtores com parametros no exemplo anterior. Para isto rode e teste antes os exemplos a partir do slide 20 das classes X, Y e Z do material. Explique com comentarios.no código.
+
+5. Veja o seguinte vídeo: Uso de Herança e Construtores no JavaScript. Utilize Herança e Construtores para melhorar o seguinte exemplo do P5 visto nas aulas anteriores, adicionando agora tipos diferentes de carros: https://p5js.org/examples/objects-car-instances.html. Obs: p5.js Web Editor | Objects: Inheritance (p5js.org) pode  também ajudar além do vídeo.

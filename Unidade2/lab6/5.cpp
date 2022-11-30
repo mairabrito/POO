@@ -2,8 +2,8 @@
  * 5. Adicione e teste agora colocando public. Quem consegue agora usar estes dados diferentemente do código anterior que usava protected, explique e mostre com exemplos.
 */
 
-/* - Adicionando novamente e teste colocando public, vai funcionar normalmente.
- * A única diferença é que na classes derivadas os dados antes protegidos, agora são públicos.
+/* - Adicionando novamente e testando com public, vai funcionar normalmente.
+ * A única diferença é que nas classes derivadas os dados que antes eram protegidos, agora são públicos.
 */
 
 #include <iostream>
