@@ -30,7 +30,8 @@ export class Time {
     }
 
     info() {
-        console.log(`${this.nome}:
+        console.log(`
+        ${this.nome}:
         Vitórias: ${this.vitorias}
         Derrotas: ${this.derrotas}
         Empates: ${this.empates}
@@ -38,12 +39,13 @@ export class Time {
         Gols: ${this.n_gols}
         SG: ${this.saldo_gols}
         Pontos: ${this.pontos}
-        Resultado Final: ${this.status}
+        Colocação: ${this.status}
 
         Jogadores:`)
 
         this.jogadores.forEach((jogador, i) => {
-            console.log(`          - ${jogador.nome}  - Camisa: ${jogador.ncamisa}`)
+            //console.log(`          - ${jogador.nome}  - Camisa: ${jogador.ncamisa}`)
+            jogador.infoJogador()
         })
     }
 }

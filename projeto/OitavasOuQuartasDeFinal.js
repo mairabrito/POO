@@ -1,17 +1,17 @@
 import { Fase } from "./Fase.js"
 import { Jogo } from "./Jogo.js"
 
-export class OitavasDeFinal extends Fase {
+export class OitavasOuQuartasDeFinal extends Fase {
     constructor(times, fase, nPartidas) {
-        super(times, fase, nPartidas); //usando o construtor da classe herdada
+        super(times, fase, nPartidas); //usando o construtor da classe base
         this.jogo = []
-        this.k = 0;
+        this.aux = 0;
     }
 
     iniciarJogos(){
         for (let i =0; i<this.nPartidas; i++){
-            this.jogo.push(new Jogo(i, this.times[this.k], this.times[this.k+1]))
-            this.k = this.k+2;
+            this.jogo.push(new Jogo(i, this.times[this.aux], this.times[this.aux+1]))
+            this.aux = this.aux+2;
         }
         for (let i =0; i<this.nPartidas; i++){
             this.jogo[i].iniciarJogo();
@@ -20,7 +20,7 @@ export class OitavasDeFinal extends Fase {
 
     getresultado() {
 
-        super.getresultado(); // usando a função 
+        super.getresultado(); // getresultado da classe base
         let resultados = []
         let n = 1;
 

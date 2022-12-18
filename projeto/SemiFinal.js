@@ -5,15 +5,15 @@ export class SemiFinal extends Fase {
     constructor(times, fase, nPartidas) {
         super(times, fase, nPartidas);
         this.jogo = []
-        this.k = 0;
-        this.primeiro_lugar = [];
-        this.terceiro_lugar = [];
+        this.aux = 0;
+        this.disputar_1Lugar = [];
+        this.disputar_3Lugar = [];
     }
 
     iniciarJogos(){
         for (let i =0; i<this.nPartidas; i++){
-            this.jogo.push(new Jogo(i, this.times[this.k], this.times[this.k+1]))
-            this.k = this.k+2;
+            this.jogo.push(new Jogo(i, this.times[this.aux], this.times[this.aux+1]))
+            this.aux = this.aux+2;
         }
         for (let i =0; i<this.nPartidas; i++){
             this.jogo[i].iniciarJogo();
@@ -31,13 +31,13 @@ export class SemiFinal extends Fase {
             console.log(`${n}º Partida: ${ganhadores.time_A.nome} vs ${ganhadores.time_B.nome}`);
             console.log(`   Vencedor: ${ganhadores.time_venceu.nome}`);
             resultados.push(ganhadores.time_venceu);
-            this.primeiro_lugar.push(ganhadores.time_venceu);
-            this.terceiro_lugar.push(ganhadores.time_perdeu);
+            this.disputar_1Lugar.push(ganhadores.time_venceu);
+            this.disputar_3Lugar.push(ganhadores.time_perdeu);
             n++;
         })
         console.log('');
-        resultados.push(this.terceiro_lugar[0]);
-        resultados.push(this.terceiro_lugar[1]);
+        resultados.push(this.disputar_3Lugar[0]);
+        resultados.push(this.disputar_3Lugar[1]);
         
         return resultados;
     }

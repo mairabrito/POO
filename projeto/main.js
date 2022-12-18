@@ -1,9 +1,9 @@
 import { Time } from "./Time.js"
-import { Jogo } from "./Jogo.js"
-import { QuartasDeFinal } from "./QuartasDeFinal.js"
 import { SemiFinal } from "./SemiFinal.js"
-import { OitavasDeFinal } from "./OitavasDeFinal.js";
-import { Jogador } from "./Jogador.js"
+import { OitavasOuQuartasDeFinal } from "./OitavasOuQuartasDeFinal.js";
+import { Atacante } from "./Atacante.js"
+import { Defesa } from "./Defesa.js"
+import { Goleiro } from "./Goleiro.js"
 import { getNomeAleatorio } from "./Jogador.js"
 import { Final } from "./Final.js"
 
@@ -26,17 +26,27 @@ const Portugal = new Time('Portugal', 15);
 const Suica = new Time('Suiça', 16);
 
 //Array contendo todos os Times
-const Times = [Brasil,Argentina,Holanda,EUA,Australia,Japão,Croacia,Espanha,CoreiaDoSul,Franca,Polonia,Inglaterra,Senegal,Marrocos,Portugal,Suica]
+const Times = [Brasil, Argentina, Holanda, EUA, Australia, Japão, Croacia, Espanha, CoreiaDoSul, Franca, Polonia, Inglaterra, Senegal, Marrocos, Portugal, Suica]
 
 //Incrementando Jogadores no Brasil e na Argentina
 const jogadoresBrasil = []
 const jogadoresArgentina = []
 //Aleatório 
-for(let i=0; i<11; i++){
-    jogadoresBrasil[i] = new Jogador(getNomeAleatorio(), 18+i, i+1);
-    jogadoresArgentina[i] = new Jogador(getNomeAleatorio(), 18+i, i+1);
+for (let i = 0; i < 11; i++) {
+    if (i < 2) {
+        jogadoresBrasil[i] = new Goleiro(getNomeAleatorio(), 18 + i, i + 1, 75+i);
+        jogadoresArgentina[i] = new Goleiro(getNomeAleatorio(), 18 + i, i + 1, 65+i);
+    }
+    else if (i < 6) {
+        jogadoresBrasil[i] = new Atacante(getNomeAleatorio(), 18 + i, i + 1, 55+i);
+        jogadoresArgentina[i] = new Atacante(getNomeAleatorio(), 18 + i, i + 1, 65+i);
+    }
+    else {
+        jogadoresBrasil[i] = new Defesa(getNomeAleatorio(), 18 + i, i + 1, 30+i);
+        jogadoresArgentina[i] = new Defesa(getNomeAleatorio(), 18 + i, i + 1, 55+i);
+    }
 }
-//Manual
+//Set Manual o nome
 Brasil.jogadores = jogadoresBrasil;
 Brasil.jogadores[9].setNome('Neymar');
 Argentina.jogadores = jogadoresArgentina;
@@ -44,33 +54,29 @@ Argentina.jogadores[9].setNome('Messi');
 
 // Iniciar os jogos (Oitavas de Final > Quartas de Final > Semi Final > Final)
 
-const _OitavasDeFinal = new OitavasDeFinal(Times, 'Oitavas de Final', 8)
+const _OitavasDeFinal = new OitavasOuQuartasDeFinal(Times, 'Oitavas de Final', 8)
 _OitavasDeFinal.iniciarJogos();
 const ResultadoOitavas = _OitavasDeFinal.getresultado();
 
-const _QuartasdeFinal = new QuartasDeFinal(ResultadoOitavas, 'Quartas de Final', 4)
+const _QuartasdeFinal = new OitavasOuQuartasDeFinal(ResultadoOitavas, 'Quartas de Final', 4)
 _QuartasdeFinal.iniciarJogos();
 const ResultadoQuartas = _QuartasdeFinal.getresultado();
-/*
+
 const _SemiFinal = new SemiFinal(ResultadoQuartas, 'Semi Final', 2)
-_SemiFinal.info();
 _SemiFinal.iniciarJogos();
 const ResultadoSemi = _SemiFinal.getresultado();
 
-const _Final = new Final(ResultadoSemi, 'Final', 2)
-_Final.info();
+const _Final = new Final(ResultadoSemi, 'Final', 2);
 _Final.iniciarJogos();
-const ResultadoFinal = _Final.getresultado(); */
+const ResultadoFinal = _Final.getresultado();
+
+// 1º a classe OitavasOuQuartasDeFinal recebe todos os times inicializados (Oitavas)
+// 2º a classe OitavasOuQuartasDeFinal recebe o resultado com todos os times que se classificaram na fase anterior (Quartas)
+// A classe SemiFinal recebe os times do resultado das Quartas
+// A classe Final recebe recebe os times seguindo a ordem do resultado da semiFinal
+// A classe Jogo recebe dois times, e aleatoriamente, set os resultados dos dois times 
 
 
-
-
-//const ResultadoOitavas= _OitavasDeFinal.getresultado()
-//const quatas = new OitavasDeFinal(ResultadoOitavas, 'quartas', 4)
-//quatas.info();
-//Brasil.info();
-//Argentina.info();
-//Brasil.getJogadores()
 
 
 

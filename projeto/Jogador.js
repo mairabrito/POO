@@ -9,11 +9,9 @@ export class Jogador {
     setNumero(novo_numero) { this.ncamisa = novo_numero; }
     setIdade(nova_idade) { this.idade = nova_idade; }
 
-    infoJogador() {
-        console.log(`Jogador:
-        nome: ${this.nome}
-        idade: ${this.idade}
-        camisa: ${this.ncamisa}`)
+    infoJogador(posicao ="") {
+        console.log(`
+        nome: ${this.nome} - idade: ${this.idade} - camisa: ${this.ncamisa}  - Posição: ${posicao}`)
     }
 }
 
