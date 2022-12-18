@@ -11,6 +11,7 @@ export class Jogo {
 
     iniciarJogo() {
         //Resultado aleatorio 
+        //Um número aleatório entre 1 e 5 é sorteado para simular os gols da partida e assim definir um vencedor.
         this.pontos_A = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
         this.pontos_B = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
 

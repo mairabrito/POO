@@ -9,11 +9,11 @@ export class OitavasOuQuartasDeFinal extends Fase {
     }
 
     iniciarJogos(){
-        for (let i =0; i<this.nPartidas; i++){
+        for (let i =0; i<this.nPartidas; i++){ // criar os objetos do tipo Jogo passando dois times e armazenar em um array 
             this.jogo.push(new Jogo(i, this.times[this.aux], this.times[this.aux+1]))
             this.aux = this.aux+2;
         }
-        for (let i =0; i<this.nPartidas; i++){
+        for (let i =0; i<this.nPartidas; i++){ // Iniciar os jogos
             this.jogo[i].iniciarJogo();
         }
     }
