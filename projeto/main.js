@@ -74,7 +74,137 @@ const ResultadoFinal = _Final.getresultado();
 // 2º a classe OitavasOuQuartasDeFinal recebe o resultado com todos os times que se classificaram na fase anterior (Quartas)
 // A classe SemiFinal recebe os times do resultado das Quartas
 // A classe Final recebe recebe os times seguindo a ordem do resultado da semiFinal
-// A classe Jogo recebe dois times, e aleatoriamente, set os resultados dos dois times 
+// A classe Jogo recebe dois times, e aleatoriamente, set os resultados dos dois times
+
+
+// EXEMPLO DE SAÍDA (RESULTADO ALEATORIO)
+/**
+ * -----------------------Oitavas de Final----------------------
+Número partidas: 8
+Times:
+   Brasil
+   Argentina
+   Holanda
+   EUA
+   Austrália
+   Japão
+   Croacia
+   Espanha
+   CoreiaDoSul
+   França
+   Polônia
+   Inglaterra
+   Senegal
+   Marrocos
+   Portugal
+   Suiça
+
+1º Partida: Brasil vs Argentina
+   Vencedor: Argentina
+2º Partida: Holanda vs EUA
+   Vencedor: Holanda
+3º Partida: Austrália vs Japão
+   Vencedor: Japão
+4º Partida: Croacia vs Espanha
+   Vencedor: Espanha
+5º Partida: CoreiaDoSul vs França
+   Vencedor: França
+6º Partida: Polônia vs Inglaterra
+   Vencedor: Inglaterra
+7º Partida: Senegal vs Marrocos
+   Vencedor: Marrocos
+8º Partida: Portugal vs Suiça
+   Vencedor: Suiça
+
+-----------------------Quartas de Final----------------------
+Número partidas: 4
+Times:
+   Argentina
+   Holanda
+   Japão
+   Espanha
+   França
+   Inglaterra
+   Marrocos
+   Suiça
+
+1º Partida: Argentina vs Holanda
+   Vencedor: Argentina
+2º Partida: Japão vs Espanha
+   Vencedor: Japão
+3º Partida: França vs Inglaterra
+   Vencedor: França
+4º Partida: Marrocos vs Suiça
+   Vencedor: Marrocos
+
+-----------------------Semi Final----------------------
+Número partidas: 2
+Times:
+   Argentina
+   Japão
+   França
+   Marrocos
+
+1º Partida: Argentina vs Japão
+   Vencedor: Argentina
+2º Partida: França vs Marrocos
+   Vencedor: Marrocos
+
+-----------------------Final----------------------
+Número partidas: 2
+Times:
+   Argentina
+   Marrocos
+   Japão
+   França
+
+1º Partida: Argentina vs Marrocos
+   Vencedor: Argentina
+2º Partida: Japão vs França
+   Vencedor: França
+
+Resultado Final:
+
+        PRIMEIRO LUGAR: Argentina
+        SEGUNDO LUGAR: Marrocos
+        TERCEIRO LUGAR: França
+
+        **Dados do vencedor**
+
+        Argentina:
+        Vitórias: 4
+        Derrotas: 0
+        Empates: 0
+        
+        Gols: 16
+        SG: 9
+        Pontos: 12
+        Colocação: 1º Lugar
+
+        Jogadores:
+
+        nome: TIME - idade: 18 - camisa: 1  - Posição: Posição: Goleiro
+
+        nome: VUGINI - idade: 19 - camisa: 2  - Posição: Posição: Goleiro
+
+        nome: LOBE - idade: 20 - camisa: 3  - Posição: Posição: Atacante
+
+        nome: COTALO - idade: 21 - camisa: 4  - Posição: Posição: Atacante
+
+        nome: PIDUGI - idade: 22 - camisa: 5  - Posição: Posição: Atacante
+
+        nome: CINONO - idade: 23 - camisa: 6  - Posição: Posição: Atacante
+
+        nome: GALUYE - idade: 24 - camisa: 7  - Posição: Posição: Defesa
+
+        nome: TUFU - idade: 25 - camisa: 8  - Posição: Posição: Defesa
+
+        nome: GIXUKU - idade: 26 - camisa: 9  - Posição: Posição: Defesa
+
+        nome: Messi - idade: 27 - camisa: 10  - Posição: Posição: Defesa
+
+        nome: DANI - idade: 28 - camisa: 11  - Posição: Posição: Defesa
+ */
 
 
 
